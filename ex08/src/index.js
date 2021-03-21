@@ -1,6 +1,25 @@
 function myMutation(arr) {
-    myMutation = [...arr];
-    return myMutation;
+  var fWord = arr[0].toLowerCase().split("");
+  var sWord = arr[1].toLowerCase().split("");
+  for (var i = 0; i < sWord.length; i++) {
+    if (fWord.indexOf(sWord[i]) == -1) {
+      return false;
+    }
+  }
+  return true;
 }
-console.log(myMutation());
-module.exports= myMutation;
+
+console.log(myMutation(["hello", "hey"]));
+console.log(myMutation(["hello", "Hello"]));
+console.log(myMutation(["zyxwvutsrqponmlkjihngfedcba", "qrstu"]));
+console.log(myMutation(["Mary", "Army"]));
+console.log(myMutation(["Mary", "Aarmy"]));
+console.log(myMutation(["Alien", "line"]));
+console.log(myMutation(["floor", "for"]));
+console.log(myMutation(["hello", "neo"]));
+console.log(myMutation(["voodoo", "no"]));
+console.log(myMutation(["ate", "date"]));
+console.log(myMutation(["Tiger", "Zebra"]));
+console.log(myMutation(["Noel", "Ole"]));
+
+module.exports = myMutation;
