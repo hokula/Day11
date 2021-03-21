@@ -11,8 +11,8 @@ function myArrayFunction(arr) {
   var averageDayTemp = [];
   var sum = 0;
   var total = 0;
-  for (var i = 0; i < newTemps.length; ++i) {
-    for (var j = 0; j < newTemps[i].length; ++j) {
+  for (var i = 0; i < newTemps.length; i++) {
+    for (var j = 0; j < newTemps[i].length; j++) {
       sum += newTemps[i][j];
     }
       total = sum / newTemps[i].length;
